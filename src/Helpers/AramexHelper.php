@@ -181,7 +181,8 @@ class AramexHelper
         $shipmentDetails->ActualWeight = $param['weight'];
         $shipmentDetails->NumberOfPieces = $param['number_of_pieces'] ?? 1;
         $shipmentDetails->GoodsOriginCountry = $param['goods_country'] ?? null;
-        
+        $shipmentDetails->CommodityCode = $param['harmonized_code'] ?? null;
+
         $shipmentDetails->ProductGroup = $param['product_group'] ?? config('aramex.ProductGroup');
         $shipmentDetails->ProductType  = $param['product_type'] ?? config('aramex.ProductType');
         $shipmentDetails->PaymentType = $param['payment_type'] ?? config('aramex.Payment');
